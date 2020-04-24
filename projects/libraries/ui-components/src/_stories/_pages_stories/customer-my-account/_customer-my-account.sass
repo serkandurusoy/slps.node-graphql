@@ -1,0 +1,168 @@
+//** Color declarations
+$green: #4acba4
+$dark-blue: #0f4684
+$red: #ff4949
+$gray: #657d95
+$gray-light: #f7f7f7
+
+
+.forms-box__account
+  position: relative
+  left: 50%
+  overflow-x: hidden
+  margin-top: 130px
+  margin-left: -135px
+  width: 270px
+  height: 740px
+  border-radius: 50px
+  background-color: #ffffff
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  z-index: 4
+
+.forms-box__account ul
+  margin: 0
+  padding: 0
+
+.forms-box__account ul li
+  list-style: none
+  padding: 15px 10px 0 10px
+
+.forms-box__account ul li:nth-child(1)
+  font-family: Montserrat
+  font-size: 22px
+  margin-top: 20px
+  text-align: center
+  color: #0e345e
+  span
+    color: $green
+
+.forms-box__account ul li:nth-child(3), .forms-box__account ul li:nth-child(8)
+  font-family: Montserrat
+  font-size: 16px
+  text-align: center
+  color: #0e345e
+  text-transform: uppercase
+  margin-bottom: -7px
+
+.forms-box__account ul li:nth-child(7) div:nth-child(3)
+  margin-top: 15px
+  svg
+    width: 15px
+    height: 15px
+    margin-right: 7px
+    margin-bottom: 5px
+  a
+    font-family: OpenSans
+    font-size: 14px
+    font-weight: 300
+    color: $green
+    text-decoration: none
+
+.forms-box__account ul li:nth-child(12)
+  text-align: center
+  margin-top: 20px
+  button
+    padding-left: 40px !important
+    padding-right: 40px !important
+
+.temporary-button
+  background-color: $red
+  border: none
+  border-radius: 100px
+  padding: 5px
+  width: 20px
+  height: 20px
+  svg
+    width: 20px
+    height: 15px
+  position: relative
+  margin-top: -37px
+  margin-left: 210px
+
+.register-line
+  position: absolute
+  left: 31%
+  width: 105px
+  border: solid 1px $green
+
+.forms-field__account
+  input
+    font-size: 14px
+    font-weight: 300
+    width: 160px !important
+    height: 20px
+  input, select, textarea, ::-webkit-input-placeholder
+    color: #0e345e !important
+
+.forms-field__account > div > div > div
+  height: 20px
+  svg
+    height: 18px !important
+
+.footer-button
+  position: absolute
+  top: -12px
+  right: 5px
+
+@media only screen and (min-width: 768px)
+  .header-buttons
+    position: absolute
+    right: 0
+    left: auto
+    top: 0
+
+  .header-buttons li
+    display: inline-block
+    list-style: none
+    margin: 0 15px
+
+  .forms-box__account
+    margin-left: -190px
+    width: 380px
+
+  .forms-box__account ul li
+    padding: 20px 25px 0 25px
+
+  .forms-box__account ul li:nth-child(1)
+    font-size: 28px
+
+  .register-line
+    left: 36%
+    width: 105px
+
+  .temporary-button
+    margin-left: 280px
+
+  .forms-field__account
+    input
+      width: 230px !important
+
+@media only screen and (min-width: 1224px)
+  .container-account
+    position: absolute
+    margin-right: 0
+
+  .forms-box__account
+    margin-left: -209px
+    width: 418px
+    height: 765px
+
+  .forms-box__account ul li
+    padding: 20px 30px 0 30px
+
+  .forms-box__account ul li:nth-child(1)
+    font-size: 32px
+
+  .register-line
+    left: 38%
+    width: 106px
+
+  .temporary-button
+    margin-left: 315px
+
+  .forms-field__account
+    input
+      width: 265px !important
+
+  .footer-button
+    top: 0

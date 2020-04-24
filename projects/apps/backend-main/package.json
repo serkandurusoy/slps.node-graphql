@@ -1,0 +1,151 @@
+{
+  "name": "@sloops/app-backend-main",
+  "version": "0.0.1",
+  "description": "Sloops repository for backend api application",
+  "private": true,
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serkandurusoy/slps.node-graphql.git"
+  },
+  "author": "Serkan Durusoy <serkan.durusoy@dna-tr.com>",
+  "dependencies": {
+    "@google-cloud/storage": "^1.4.0",
+    "@sloops/library-utils": "^0.0.1",
+    "apollo-server-express": "^1.2.0",
+    "babel-polyfill": "^6.26.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "bull": "^3.3.6",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-rate-limit": "^2.9.0",
+    "graphql": "^0.11.7",
+    "graphql-iso-date": "^3.3.0",
+    "graphql-tools": "^2.8.0",
+    "helmet": "^3.9.0",
+    "ioredis": "^3.2.1",
+    "jsonwebtoken": "^8.1.0",
+    "knex": "^0.14.2",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.33",
+    "mysql": "^2.15.0",
+    "rate-limit-redis": "^1.1.0",
+    "sendgrid": "^5.2.3",
+    "source-map-support": "^0.5.0",
+    "yup": "^0.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.1"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+      "no-nested-ternary": [
+        0
+      ],
+      "import/prefer-default-export": [
+        0
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true,
+          "optionalDependencies": false,
+          "peerDependencies": true
+        }
+      ],
+      "class-methods-use-this": [
+        0
+      ],
+      "object-shorthand": [
+        "error",
+        "always",
+        {
+          "avoidQuotes": false
+        }
+      ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allowAfterThis": true
+        }
+      ]
+    },
+    "env": {
+      "node": true
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8.9.1",
+            "uglify": true
+          },
+          "useBuiltIns": true
+        }
+      ],
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-runtime",
+      "transform-regenerator",
+      "transform-decorators-legacy",
+      "transform-export-extensions",
+      [
+        "lodash",
+        {
+          "id": [
+            "lodash",
+            "recompose"
+          ]
+        }
+      ]
+    ],
+    "ignore": [
+      "src/public"
+    ]
+  },
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1"
+  },
+  "scripts": {
+    "link-local-packages": "yarn link \"@sloops/library-utils\"",
+    "lint": "eslint src/",
+    "lint-fix": "eslint --fix src/",
+    "build-staging": "yarn run lint && rm -fr dist && babel --source-maps inline -d dist/ src/ --copy-files",
+    "build-production": "yarn run lint && rm -fr dist && babel --source-maps inline -d dist/ src/ --copy-files",
+    "serve-staging": "NODE_ENV_TARGET=staging PORT=80 TZ=Etc/UTC NODE_ENV=production node dist/index.js",
+    "serve-production": "NODE_ENV_TARGET=production PORT=80 TZ=Etc/UTC NODE_ENV=production node dist/index.js",
+    "deploy-staging": "yarn run build-staging && bash ../../../scripts/deploy/backend/run.sh ${PWD##*/} staging",
+    "dev-db-migrate": "TZ=Etc/UTC NODE_ENV=development knex migrate:latest",
+    "dev-db-rollback": "TZ=Etc/UTC NODE_ENV=development knex migrate:rollback",
+    "start-dev-db": "bash ../../../scripts/docker-compose/run.sh",
+    "stop-dev-db": "bash ../../../scripts/docker-compose/stop.sh",
+    "restart-dev-db": "bash ../../../scripts/docker-compose/restart.sh",
+    "dev-nodb": "NODE_ENV_TARGET=development PORT=8080 TZ=Etc/UTC NODE_ENV=development nodemon src/index.js --exec 'yarn run lint && babel-node'",
+    "dev": "yarn run start-dev-db && yarn run dev-nodb",
+    "start": "yarn run dev"
+  }
+}

@@ -1,0 +1,140 @@
+.inventory
+  &.pages-form-container
+    max-width: 612px
+    margin-top: 30px
+
+.inventory-product-details
+  padding-top: 20px
+  padding-bottom: 10px
+  @include clearfix;
+
+.inventory-product-images,
+.inventory-product-data
+  width: 50%
+  box-sizing: border-box
+
+.inventory-product-data
+  float: right
+  padding-left: 30px
+
+.inventory-product-images
+  float: left
+  border-radius: 25px
+  background-color: rgba(185, 195, 200, 0.2)
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  border: dashed 1px $dusty-gray
+  height: 244px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $font-main
+  font-size: 14px
+  color: $grey-blue
+  text-align: center
+  padding: 25px
+
+.inventory-image-highlight
+  color: $green
+
+.inventory-product-parameters
+  @include clearfix;
+
+.inventory-product-main,
+.inventory-product-types
+  box-sizing: border-box
+
+.inventory-product-main
+  width: 70%
+  float: left
+  padding-right: 15px
+
+.inventory-product-types
+  width: 30%
+  float: right
+  padding-left: 15px
+  .Select
+    margin-top: 5px
+    margin-bottom: 15px
+
+.inventory-dimensions
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+
+.inventory-dimensions-separator
+  height: 70px
+  margin: 0 5px 20px
+  display: flex
+  align-items: center
+
+.inventory-title-tools
+  font-family: $font-main
+  font-size: 12px
+  text-transform: none
+  color: $silver
+
+.inventory-variants-title
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .link
+    color: $green
+    padding-right: 10px
+
+.inventory-checkbox-list
+  margin-top: 15px
+  margin-bottom: 15px
+
+.inventory-checkboxes
+  @include clearfix;
+
+.inventory-checkbox-add-btn,
+.inventory-checkbox-list
+  float: left
+
+.inventory-checkbox-add-btn
+  margin-top: 15px
+  margin-bottom: 15px
+
+.inventory-field-with-button
+  @include clearfix
+
+.inventory-field-with-button-wrapper
+  position: relative
+  float: left
+  width: 100%
+  &.selector
+    padding: 15px 0
+
+.inventory-field-with-button-field
+  margin: 0
+
+.inventory-field-with-button-btn
+  position: absolute
+  right: 5px
+  top: 47%
+  transform: translateY(-50%)
+  background-color: $green !important
+  width: 30px
+  height: 30px
+  padding: 5px !important
+
+.inventory-change-price
+  margin-bottom: 20px
+  .pages-form-container-label
+    margin-bottom: 15px
+
+.inventory-buttons
+  @include clearfix
+  padding-top: 40px
+  padding-bottom: 20px
+
+.inventory-cancel-button
+  float: left
+
+.inventory-preview-button,
+.inventory-save-button
+  float: right
+
+.inventory-preview-button
+  margin-right: 10px

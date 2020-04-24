@@ -1,0 +1,30 @@
+version: '2'
+services:
+  mysql:
+    hostname: mysql.dev
+    image: mysql:5.7.17
+    env_file: ./env/mysql/.env
+    container_name: mysql.dev
+    # command: mysqld --user=root --verbose
+    volumes:
+      - /var/lib/mysql
+    ports:
+      - 13306:3306
+    environment:
+      - TZ=Etc/UTC
+  redis:
+    hostname: redis.dev
+    image: redis:3.2.9
+    container_name: redis.dev
+    ports:
+      - 16379:6379
+    environment:
+      - TZ=Etc/UTC
+  mongo:
+    hostname: mongo.dev
+    image: mongo:3.2.11
+    container_name: mongo.dev
+    ports:
+      - 7017:27017
+    environment:
+      - TZ=Etc/UTC

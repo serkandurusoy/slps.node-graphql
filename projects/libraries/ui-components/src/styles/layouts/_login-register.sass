@@ -1,0 +1,115 @@
+//** Color declarations
+$green: #4acba4
+$dark-blue: #0f4684
+$red: #ff4949
+$gray: #657d95
+$gray-light: #f7f7f7
+
+.login-register
+  position: relative
+  border-bottom: 225px solid #fff
+  background:
+    image: url("./images/login-register/white-curve@1x.png"), url("./images/login-register/Circles-under-box@1x.png"), url("./images/login-register/Blue_map.jpg")
+    repeat: no-repeat, no-repeat, no-repeat
+    size: contain, auto, cover
+    position: bottom, 50% 20px, bottom
+
+.login-register__form
+  max-width: 418px
+  box-sizing: border-box
+  margin: 75px auto -150px
+  border-radius: 50px
+  background-color: #fff
+  padding: 50px 30px 150px
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.2)
+  text-align: center
+  @media only screen and (min-width: 1224px)
+    margin-top: 115px
+
+.login-register__form-inner
+  position: relative
+  z-index: 2
+
+.login-register__title
+  font-size: 32px
+  font-family: Montserrat
+  text-align: center
+  color: #0e345e
+  font-weight: normal
+  margin: 0 0 50px
+  span
+    color: $green
+
+.login-register__separator
+  background-color: $green
+  width: 103px
+  height: 2px
+  margin: 30px auto
+
+.login-register__title + .login-register__separator
+  margin-bottom: 50px
+
+
+.login-register__forgot
+  font-family: "Open Sans"
+  font-size: 14px
+  color: $green
+  display: inline-block
+  &:hover
+    color: $green
+
+.login-register__button-subtext
+  display: inline-block
+  margin-top: 50px
+  font-family: "Open Sans"
+  font-size: 14px
+  font-weight: 300
+  text-align: center
+  color: $dark-blue
+
+.login-register__button-subtext-link
+  color: $green
+
+.login-register__pocket-white
+  position: absolute
+  left: 0
+  right: 0
+  bottom: -155px
+  height: 630px
+  border-bottom: 70px solid #fff
+  background:
+    image: url("./images/login-register/white-curve@1x.png")
+    repeat: no-repeat
+    size: contain
+    position: 50% 100%
+
+.login-register__pocket-grey
+  position: absolute
+  left: 0
+  right: 0
+  bottom: -225px
+  height: 630px
+  border-bottom: 55px solid #f7f7f7
+  background:
+    image: url("./images/login-register/White-Grey@1x.png")
+    repeat: no-repeat
+    size: contain
+    position: 50% 100%
+
+.login-register__footer-menu
+  position: relative
+  height: 40px
+  padding: 0
+  margin: 0
+  top: 190px
+  li
+    display: inline-block
+    list-style: none
+    margin: 0 10px
+    a
+      text-decoration: none
+      color: #A1B0BF
+      font-size: 14px
+      opacity: 0.8
+      font-weight: 300
+      font-family: OpenSans

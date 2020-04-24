@@ -1,0 +1,208 @@
+{
+  "name": "@sloops/app-ui-retail-manager",
+  "version": "0.0.1",
+  "description": "Sloops repository for retail manager ui",
+  "private": true,
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serkandurusoy/slps.node-graphql.git"
+  },
+  "author": "Serkan Durusoy <serkan.durusoy@dna-tr.com>",
+  "dependencies": {
+    "@mygooder/react-slick": "^0.15.4-0.0.2",
+    "@sloops/library-ui-components": "^0.0.1",
+    "@sloops/library-ui-data-wrappers": "^0.0.1",
+    "@sloops/library-utils": "^0.0.1",
+    "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-apollo": "^1.4.16",
+    "react-dom": "^16.1.1",
+    "react-dropzone": "^4.2.3",
+    "react-google-maps": "^9.4.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-s-alert": "^1.3.2",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-form": "^7.1.2",
+    "redux-thunk": "^2.2.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^2.2.3",
+    "yup": "^0.23.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.2",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "favicons-webpack-plugin": "^0.0.7",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "lodash-webpack-plugin": "^0.11.4",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "precss": "^2.0.0",
+    "react-hot-loader": "^3.1.3",
+    "resolve-url-loader": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ],
+      "no-nested-ternary": [
+        0
+      ],
+      "import/prefer-default-export": [
+        0
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true,
+          "optionalDependencies": false,
+          "peerDependencies": true
+        }
+      ],
+      "react/no-unused-prop-types": [
+        0
+      ],
+      "no-unused-prop-types": [
+        0,
+        {
+          "skipShapeProps": true
+        }
+      ],
+      "jsx-a11y/click-events-have-key-events": [
+        0
+      ],
+      "jsx-a11y/anchor-is-valid": [
+        0
+      ],
+      "jsx-a11y/no-noninteractive-element-interactions": [
+        0
+      ],
+      "jsx-a11y/no-static-element-interactions": [
+        0
+      ],
+      "jsx-a11y/anchor-has-content": [
+        0
+      ],
+      "jsx-a11y/no-autofocus": [
+        0
+      ],
+      "class-methods-use-this": [
+        0
+      ],
+      "object-shorthand": [
+        "error",
+        "always",
+        {
+          "avoidQuotes": false
+        }
+      ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allowAfterThis": true
+        }
+      ]
+    },
+    "env": {
+      "browser": true
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 3 versions",
+              "safari >= 7"
+            ],
+            "uglify": true
+          },
+          "useBuiltIns": true
+        }
+      ],
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "react-hot-loader/babel",
+      "transform-regenerator",
+      "transform-decorators-legacy",
+      "transform-export-extensions",
+      [
+        "lodash",
+        {
+          "id": [
+            "lodash",
+            "recompose"
+          ]
+        }
+      ]
+    ],
+    "env": {
+      "start": {
+        "presets": [
+          "react-hmre"
+        ]
+      }
+    }
+  },
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1"
+  },
+  "scripts": {
+    "link-local-packages": "yarn link \"@sloops/library-utils\" && yarn link \"@sloops/library-ui-data-wrappers\" && yarn link \"@sloops/library-ui-components\"",
+    "lint": "eslint src/",
+    "lint-fix": "eslint --fix src/",
+    "build-staging": "yarn run lint && rm -fr dist && NODE_ENV=production NODE_ENV_TARGET=staging webpack --display-optimization-bailout --define process.env.NODE_ENV=\"'production'\" --define process.env.NODE_ENV_TARGET=\"'staging'\"",
+    "build-production": "yarn run lint && rm -fr dist && NODE_ENV=production NODE_ENV_TARGET=production webpack --display-optimization-bailout --define process.env.NODE_ENV=\"'production'\" --define process.env.NODE_ENV_TARGET=\"'production'\"",
+    "deploy-staging": "yarn run build-staging && bash ../../../scripts/deploy/apps/run.sh ${PWD##*/} staging",
+    "deploy-production": "echo 'production deployments not prepared yet' && exit 1",
+    "dev": "NODE_ENV=development NODE_ENV_TARGET=development node webpack-dev-server.js",
+    "start": "TZ=Etc/UTC yarn run dev"
+  }
+}

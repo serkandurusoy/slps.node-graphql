@@ -1,0 +1,214 @@
+.shop-details
+  max-width: 100%
+
+.shop-details__actions
+  margin-bottom: 15px
+  @media only screen and (min-width: 1024px)
+    height: 0
+    text-align: right
+
+.shop-details__main
+  margin-bottom: 25px
+  @media only screen and (min-width: 1024px)
+    display: flex
+    align-items: flex-start
+
+.shop-details__info
+  margin-bottom: 20px
+  flex-grow: 1
+  margin-bottom: 30px
+
+.shop-details__info-head
+  @media only screen and (min-width: 1024px)
+    display: flex
+    align-items: flex-start
+
+.shop-details__logo
+  max-width: 338px
+  border-radius: 25px
+  border: 10px solid $almost-white
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  box-sizing: border-box
+
+.shop-details__info-head-text
+  margin: 40px 0 0
+
+.shop-details__title
+  font-family: Montserrat
+  font-size: 36px
+  color: $twilight-blue
+  margin: 0 0 6px
+  font-weight: 400
+
+.shop-details__rating
+  margin-bottom: 20px
+
+.shop-details__soon
+  margin-bottom: 30px
+  font-size: 14px
+  color: $medium-brown
+  padding: 3px 22px
+  background-color: $pale-gold
+  border-radius: 100px
+  display: inline-block
+
+.shop-details__categories
+  font-size: 18px
+  font-weight: 300
+  color: $grey-blue
+
+.shop-details__categories-label
+  font-size: 12px
+  font-weight: normal
+  color: $silver
+  margin-top: 7px
+  font-weight: 300
+
+.shop-details__info-triptic
+  max-width: 590px
+  @media only screen and (min-width: 1024px)
+    display: flex
+    justify-content: space-between
+  & > * + *
+    margin-top: 30px
+    @media only screen and (min-width: 1024px)
+      margin: 0 0 0 30px
+
+.shop-details__label
+  font-size: 14px
+  color: $silver
+  margin-bottom: 14px
+  white-space: nowrap
+
+.shop-details__open-item
+  border-radius: 100px
+  line-height: normal
+  margin-bottom: 5px
+  white-space: nowrap
+  &.is-active
+    color: $medium-brown
+    padding: 3px 10px
+    margin: 0 -10px
+    background-color: $pale-gold
+
+.shop-details__content
+  line-height: 1.86
+  color: $grey-blue
+  font-weight: 300
+  font-size: 14px
+
+.shop-details__map
+  background-color: $almost-white
+  width: 338px
+  height: 420px
+  border: 10px solid #fff
+  border-radius: 25px
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  margin: 50px 0 30px
+  box-sizing: border-box
+  @media only screen and (min-width: 1024px)
+    margin: 80px 0 30px 30px
+
+.shop-details__info-longtext
+  max-width: 590px
+  margin-top: 50px
+
+.shop-details__gallery
+  display: flex
+  position: relative
+
+.shop-details__gallery-item
+  width: 240px
+  height: 240px
+  box-sizing: border-box
+  border-radius: 25px
+  border: 10px solid #fff
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  & + &
+    margin-top: 30px
+    @media only screen and (min-width: 1024px)
+      margin: 0 0 0 30px
+
+.shop-details__gallery-left,
+.shop-details__gallery-right
+  width: 40px
+  height: 40px
+  border-radius: 100px
+  box-shadow: 0 5px 10px 0 rgba(18, 43, 35, 0.2)
+  background-color: $green
+  position: absolute
+  top: calc(50% - 20px)
+  display: flex
+  box-sizing: border-box
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.shop-details__gallery-left
+  left: -20px
+  padding-right: 3px
+
+.shop-details__gallery-right
+  right: -20px
+  padding-left: 3px
+
+.owner-details-label
+  font-family: $font-secondary
+  font-size: 20px
+  color: $twilight-blue
+  margin: 0 0 6px
+  font-weight: 400
+
+.owner-details-value
+  font-size: 18px
+  font-weight: 300
+  color: $grey-blue
+
+.owner-details-column
+  float: left
+  margin-right: 30px
+  min-width: 200px
+  max-width: 100%
+
+.shop-details__logo-wrapper
+  max-width: 358px
+  width: 100%
+  border-radius: 25px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-right: 55px
+  margin-bottom: 55px
+
+.business-product-details
+  padding-top: 20px
+  padding-bottom: 10px
+  @include clearfix;
+
+.business-product-images,
+.business-product-data
+  width: 50%
+  box-sizing: border-box
+
+.business-product-data
+  float: right
+  padding-left: 30px
+
+.business-product-images
+  float: left
+
+.business-image-highlight
+  color: $green
+
+.business-address-field
+  margin-bottom: 35px
+  > div
+    width: 100% !important
+
+.business-product-categories-item
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+.business-opening-field
+  margin-bottom: 35px

@@ -1,0 +1,120 @@
+{
+  "name": "@sloops/library-utils",
+  "version": "0.0.1",
+  "description": "Sloops repository for reusable utility functions",
+  "private": true,
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serkandurusoy/slps.node-graphql.git"
+  },
+  "author": "Serkan Durusoy <serkan.durusoy@dna-tr.com>",
+  "files": [
+    "*.js",
+    "src/",
+    "dist/"
+  ],
+  "main": "dist/index.js",
+  "peerDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.4",
+    "yup": "^0.23.0"
+  },
+  "dependencies": {
+    "hash.js": "^1.1.3",
+    "jwt-decode": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "lodash": "^4.17.4",
+    "yup": "^0.23.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+      "no-nested-ternary": [
+        0
+      ],
+      "import/prefer-default-export": [
+        0
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true,
+          "optionalDependencies": false,
+          "peerDependencies": true
+        }
+      ],
+      "class-methods-use-this": [
+        0
+      ],
+      "object-shorthand": [
+        "error",
+        "always",
+        {
+          "avoidQuotes": false
+        }
+      ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allowAfterThis": true
+        }
+      ]
+    },
+    "env": {
+      "shared-node-browser": true
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 3 versions",
+              "safari >= 7"
+            ],
+            "uglify": true
+          },
+          "useBuiltIns": true
+        }
+      ],
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-regenerator",
+      "transform-decorators-legacy",
+      "transform-export-extensions",
+      ["lodash", { "id": ["lodash", "recompose"] }]
+    ]
+  },
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1"
+  },
+  "scripts": {
+    "link-local-packages": "yarn link",
+    "lint": "eslint src/",
+    "lint-fix": "eslint --fix src/",
+    "build-npm": "yarn run lint && rm -fr dist && babel --source-maps inline -d dist/ src/ --copy-files",
+    "build": "yarn run lint && yarn run build-npm",
+    "start": "yarn run build"
+  }
+}

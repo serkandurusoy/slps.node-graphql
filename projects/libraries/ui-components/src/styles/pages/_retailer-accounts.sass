@@ -1,0 +1,99 @@
+.retailer-accounts-buttons
+  @include clearfix
+  padding-top: 40px
+  padding-bottom: 20px
+
+.retailer-accounts-cancel-button
+  float: left
+
+.retailer-accounts-preview-button,
+.retailer-accounts-save-button
+  float: right
+
+.retailer-accounts-preview-button
+  margin-right: 10px
+
+.retailer-accounts-half,
+.retailer-accounts-one-third,
+.retailer-accounts-two-thirds
+  float: left
+
+.retailer-accounts-half
+  width: 50%
+
+.retailer-accounts-one-third
+  width: 33%
+
+.retailer-accounts-two-thirds
+  box-sizing: border-box
+  padding-right: 20px
+  width: 67%
+  button
+    top: 50% !important
+
+.retailer-accounts-shop-logo,
+.retailer-accounts-products-dropzone
+  box-sizing: border-box
+  border-radius: 25px
+  background-color: rgba(185, 195, 200, 0.2)
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  border: dashed 1px $dusty-gray
+  height: 244px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $font-main
+  font-size: 14px
+  color: $grey-blue
+  text-align: center
+  padding: 25px
+  .highlighted
+    color: $green
+
+.retailer-accounts-products-dropzone
+  height: 100px
+
+.retailer-accounts-shop-data
+  box-sizing: border-box
+  padding-left: 20px
+  padding-right: 20px
+
+.retailer-accounts-shop-type
+  margin-top: 15px !important
+  label
+    padding: 11px 20px !important
+    &:hover
+      border-width: 1px
+
+.retailer-accounts-checkbox
+  label
+    font-family: $font-main
+    font-size: 14px
+    color: $green
+    margin-left: 5px
+
+.retiler-accounts-product-image
+  position: relative
+  box-sizing: border-box
+  float: left
+  height: 200px
+  width: calc(50% - 10px)
+  border-radius: 25px
+  background-color: #ffffff
+  box-shadow: 0 0 100px 0 rgba(18, 43, 35, 0.1)
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 20px
+  &:nth-child(2n + 1)
+    margin-right: 10px
+  &:nth-child(2n)
+    margin-left: 10px
+  .delete-button
+    position: absolute
+    top: 5px
+    right: 5px
+    padding: 5px
+    > svg
+      width: 15px !important
+      height: 15px !important

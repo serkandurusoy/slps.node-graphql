@@ -1,0 +1,350 @@
+//
+// DO WE STILL NEED THIS FILE OR IT IS DEPRECATED?
+//
+
+// SASS copied from different existing codepen
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900')
+
+//** Color declarations
+$green: #4acba4
+$dark-blue: #0f4684
+$red: #ff4949
+
+//buttons
+.button
+  cursor: pointer
+  font-family: "Open Sans"
+  outline: none
+  span
+    line-height: 14px
+  svg
+    display: block
+    width: 14px
+    height: 14px
+
+.button-default
+  background-color: $green
+  border: none
+  border-radius: 100px
+  box-shadow: 0 10px 20px 0 rgba(18, 43, 35, 0.1)
+  color: #fff
+  font-size: 14px
+  font-weight: 600
+  padding: 12px 20px
+  text-transform: uppercase
+  &:hover
+    background-color: darken($green, 10%)
+  svg
+    fill: #fff
+
+.button-secondary
+  background-color: #ffffff
+  border: solid 1px #657d95
+  color: #657d95
+  border-radius: 100px
+  padding: 10px 20px
+  font-size: 14px
+  text-transform: uppercase
+  &:hover
+    background-color: #657d95
+    color: #fff
+    svg
+      fill: #fff
+  svg
+    fill: #657d95
+
+.button-icon
+  box-shadow: 0 10px 20px 0 rgba(18, 43, 35, 0.05)
+  padding: 10px
+  svg
+    width: 20px
+    height: 20px
+// -------------------------------- END OF SASS COPY
+
+body
+  margin: 0
+  overflow-x: hidden
+
+.header
+  padding: 0
+  margin: 0
+
+.container
+  max-width: 1200px
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+
+.footer
+  margin: 0
+  padding: 0
+  height: 0
+
+.header-container
+  padding-top: 30px
+  position: relative
+
+.header-image
+  width: 100%
+  min-height: 650px
+  background: url("https://drive.google.com/uc?export=view&id=0B3pRizAu8cBnNkdERUc4c1E5aTQ") no-repeat
+  background-size: cover
+  background-position: left top
+
+.header-nav
+  position: relative
+  z-index: 14
+
+.header-logo
+  position: absolute
+  left: 0
+  img
+    max-width: 140px
+    box-sizing: border-box
+    fill: white
+
+.header-buttons
+  position: absolute
+  top: 50px
+  left: 0
+
+.header-buttons ul
+  padding: 0
+
+.header-buttons li
+  display: inline-block
+  list-style: none
+  margin: 0
+  margin-right: 15px
+
+.header-title-wrapper
+  position: absolute
+  left: 30px
+  top: 200px
+  width: 300px
+  height: 420px
+  z-index: 10
+
+.title-text
+  font-family: Montserrat
+  font-size: 50px
+  font-weight: 900
+  text-align: left
+  color: #fff
+  span
+    color: $green
+
+.title-button
+  margin-top: 60px
+
+.header-media-wrapper
+  display: none
+  position: absolute
+  right: -20px
+  margin-top: 55px
+  overflow-x: hidden
+  overflow-y: hidden
+  width: 626px
+  height: 570px
+  z-index: 9
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    overflow: hidden
+
+.media-phone
+  position: relative
+  z-index: 12
+
+.media-pocket
+  position: absolute
+  width: 100%
+  height: auto
+  margin-top: -150px
+  z-index: 13
+
+.footer-container
+  position: relative
+  margin-bottom: 0
+  padding: 0
+  height: 0
+
+.footer-nav
+  position: relative
+  top: -40px
+  height: 50px
+  bottom: -350px
+  max-width: 1200px
+
+.footer-menu ul
+  margin: 0
+  padding: 0
+
+.footer-menu li
+  display: inline-block
+  list-style: none
+  margin: 0 10px
+  a
+    text-decoration: none
+    color: #657d95
+    font-size: 14px
+    opacity: 0.8
+    font-weight: 300
+
+.footer-button
+  position: absolute
+  top: -10px
+  right: 5px
+
+.footer-image
+  width: 100%
+  margin-bottom: -15px
+  min-height: 270px
+  background: url("https://drive.google.com/uc?export=view&id=0B3pRizAu8cBndDZYeXF4cVhfNHc") no-repeat
+  background-size: cover
+
+.button-default__nav
+  background-color: $green
+  border: none
+  border-radius: 100px
+  box-shadow: 0 10px 20px 0 rgba(18, 43, 35, 0.1)
+  color: #fff
+  font-size: 14px
+  font-weight: 600
+  padding: 12px 20px
+  text-transform: uppercase
+  &:hover
+    background-color: darken($green, 10%)
+  svg
+    fill: #fff
+
+.button-default__title
+  background-color: $green
+  border: none
+  border-radius: 100px
+  box-shadow: 0 10px 20px 0 rgba(168, 168, 168, 0.5)
+  color: #fff
+  font-size: 18px
+  font-weight: 300
+  padding: 18px 15.8px
+  text-transform: uppercase
+  &:hover
+    background-color: darken($green, 10%)
+  svg
+    fill: #fff
+
+.button-secondary__nav
+  background-color: transparent
+  opacity: 0.8
+  border: none
+  font-weight: 100
+  letter-spacing: 0.9px
+  color: #fff
+  text-transform: uppercase
+
+.button-default__nav
+  font-weight: 100
+  letter-spacing: 0.9px
+  color: #fff
+  text-transform: uppercase
+  padding: 10px 37px 11px 38px
+
+
+@media only screen and (min-width: 768px)
+
+  .header-image
+    width: 100%
+    min-height: 650px
+
+  .header-buttons
+    position: absolute
+    right: 0
+    left: auto
+    top: 0
+
+  .header-buttons li
+    display: inline-block
+    list-style: none
+    margin: 0 15px
+
+  .header-title-wrapper
+    position: absolute
+    left: 50px
+    top: 280px
+    width: 350px
+    height: 420px
+    z-index: 10
+
+  .title-text
+    font-family: Montserrat
+    font-size: 60px
+    font-weight: 900
+    text-align: left
+    color: #fff
+    span
+      color: $green
+
+  .title-button
+    margin-top: 95px
+
+  .header-media-wrapper
+    display: block
+    position: absolute
+    right: -50px
+    margin-top: 50px
+    overflow-x: hidden
+    overflow-y: hidden
+    width: 576px
+    height: 570px
+    z-index: 9
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      overflow: hidden
+
+  .media-phone
+    margin-top: 25px
+    position: relative
+    z-index: 12
+
+@media only screen and (min-width: 1224px)
+
+  .header-image
+    min-height: 750px
+
+
+  .header-title-wrapper
+    position: absolute
+    left: 150px
+    top: 272px
+    width: 600px
+    min-height: 420px
+    z-index: 10
+
+  .title-text
+    font-size: 90px
+
+  .title-button
+    margin-top: 90px
+
+  .header-media-wrapper
+    right: -20px
+    margin-top: 95px
+    width: 626px
+    @media only screen and (min-width: 1302px)
+      margin-top: 120px
+    @media only screen and (min-width: 1500px)
+      margin-top: 150px
+
+  .media-phone
+    margin-top: 0
+    position: relative
+    z-index: 12
+
+  .media-pocket
+    @media only screen and (min-width: 1600px)
+      display: none

@@ -1,0 +1,281 @@
+//** Color declarations
+$green: #4acba4
+$dark-blue: #0f4684
+$red: #ff4949
+$gray: #657d95
+$gray-light: #f7f7f7
+
+.footer
+  position: relative
+  margin-top: -150px
+  padding: 0
+  height: 20px
+
+.header-container
+  padding-top: 30px
+  position: relative
+
+.header-image
+  width: 100%
+  min-height: 650px
+  background: url("images/Blue_map.jpg") no-repeat
+  background-size: cover
+  background-position: left top
+
+.header-nav
+  position: relative
+  z-index: 14
+
+.header-logo
+  position: absolute
+  left: 0
+  img
+    max-width: 140px
+    box-sizing: border-box
+    fill: white
+
+.header-buttons
+  position: absolute
+  top: 50px
+  left: 0
+
+.header-buttons ul
+  padding: 0
+
+.header-buttons li
+  display: inline-block
+  list-style: none
+  margin: 0
+  margin-right: 15px
+
+.header-title-wrapper
+  position: absolute
+  left: 30px
+  top: 200px
+  width: 300px
+  height: 420px
+  z-index: 10
+
+.title-text
+  font-family: Montserrat
+  font-size: 50px
+  font-weight: 900
+  text-align: left
+  color: #fff
+  span
+    color: $green
+
+.title-button
+  margin-top: 60px
+
+.header-media-wrapper
+  display: none
+  position: absolute
+  right: -20px
+  margin-top: 55px
+  overflow-x: hidden
+  overflow-y: hidden
+  width: 626px
+  height: 570px
+  z-index: 9
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    overflow: hidden
+
+.media-phone
+  position: relative
+  z-index: 12
+
+.footer-container
+  position: relative
+  margin-bottom: 0
+  padding: 0
+  height: 0
+
+.footer-nav
+  position: relative
+  height: 40px
+  max-width: 1200px
+
+.footer-menu ul
+  margin: 0
+  padding: 0
+
+.footer-menu li
+  display: inline-block
+  list-style: none
+  margin: 0 10px
+  a
+    text-decoration: none
+    color: #A1B0BF
+    font-size: 14px
+    opacity: 0.8
+    font-weight: 300
+    font-family: OpenSans
+
+.footer-button
+  position: absolute
+  top: -12px
+  right: 5px
+
+.footer-image
+  width: 100%
+  min-height: 370px
+  background: url("images/White-Grey@1x.png") no-repeat
+  background-size: cover
+
+.footer-gray-block
+  position: absolute
+  width: 100%
+  height: 60px
+  background-color: #F7F7F7
+
+@media only screen and (min-width: 768px)
+
+  .header-image
+    width: 100%
+    min-height: 650px
+
+  .header-buttons
+    position: absolute
+    right: 0
+    left: auto
+    top: 0
+
+  .header-buttons li
+    display: inline-block
+    list-style: none
+    margin: 0 15px
+
+  .header-title-wrapper
+    position: absolute
+    left: 50px
+    top: 280px
+    width: 350px
+    height: 420px
+    z-index: 10
+
+  .title-text
+    font-family: Montserrat
+    font-size: 60px
+    font-weight: 900
+    text-align: left
+    color: #fff
+    span
+      color: $green
+
+  .title-button
+    margin-top: 130px
+
+  .header-media-wrapper
+    display: block
+    position: absolute
+    right: -50px
+    margin-top: 50px
+    overflow-x: hidden
+    overflow-y: hidden
+    width: 576px
+    height: 570px
+    z-index: 9
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      overflow: hidden
+
+  .media-phone
+    margin-top: 25px
+    position: relative
+    z-index: 12
+
+  .media-pocket
+    position: absolute
+    width: 100%
+    height: auto
+    bottom: -15px
+    z-index: 13
+
+@media only screen and (min-width: 1000px)
+  .header-media-wrapper
+    margin-top: 20px
+
+  .media-pocket
+    -ms-transform: rotate(-4deg)
+    -webkit-transform: rotate(-4deg)
+    transform: rotate(-4deg)
+
+  .footer__landing
+    top: 20px
+
+@media only screen and (min-width: 1100px)
+  .header-media-wrapper
+    margin-top: 0
+
+  .footer__landing
+    top: 70px
+
+@media only screen and (min-width: 1224px)
+
+  .header-image
+    min-height: 750px
+
+  .header-title-wrapper
+    position: absolute
+    left: 150px
+    top: 272px
+    width: 600px
+    min-height: 420px
+    z-index: 10
+
+  .title-text
+    font-size: 90px
+
+  .title-button
+    margin-top: 110px
+
+  .header-media-wrapper
+    right: -20px
+    margin-top: 95px
+    width: 626px
+    @media only screen and (min-width: 1600px)
+      margin-top: 150px
+
+  .media-phone
+    margin-top: 0
+    position: relative
+    z-index: 12
+
+  .media-pocket
+    position: absolute
+    width: 100%
+    height: auto
+    bottom: -25px
+    margin-top: -150px
+    z-index: 13
+    -ms-transform: rotate(-6deg)
+    -webkit-transform: rotate(-6deg)
+    transform: rotate(-6deg)
+    @media only screen and (min-width: 1710px)
+      display: none
+
+  .footer-menu li
+    margin-top: 10px
+
+  .footer-button
+    top: 0
+
+  .footer-gray-block
+    height: 90px
+
+@media only screen and (min-width: 1450px)
+
+  .footer-menu li
+    margin-top: 30px
+
+  .footer-button
+    top: 20px
+
+  .footer-gray-block
+    height: 110px

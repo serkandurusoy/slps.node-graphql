@@ -1,0 +1,54 @@
+.dashboard-page-sidebar
+  width: 260px
+  float: left
+
+.dashboard-page-content
+  box-sizing: border-box
+  padding-right: 30px
+  width: #{calc(100% - 260px)}
+  float: left
+
+.dashboard-page-tabnav
+  float: left
+  width: #{calc(100% - 150px)}
+  margin-top: 40px
+
+.dashboard-page-user
+  float: left
+  width: 150px
+  display: flex
+  align-items: stretch
+  padding: 15px 0
+  border-bottom: 1px solid $loblolly
+  margin-top: 40px
+  .user-name
+    font-family: $font-main
+    font-size: 14px
+    text-align: left
+    color: $twilight-blue
+    text-transform: uppercase
+    > span
+      font-weight: 300
+
+.dashboard-info-badge
+  background-color: $green
+  padding: 20px
+  color: #fff
+  border-radius: 25px
+  text-align: center
+  font-family: $font-main
+  margin-bottom: 30px
+
+.dashboard-badge-amount
+  font-size: 36px
+  font-weight: 600
+
+.dashboard-badge-label
+  font-size: 12px
+
+.dashboard-page-nav,
+.dashboard-page-meetings
+  @include clearfix;
+
+.dashboard-page-meetings
+  margin-top: 30px

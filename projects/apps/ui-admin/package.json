@@ -14,7 +14,7 @@
     "@sloops/library-ui-components": "^0.0.1",
     "@sloops/library-ui-data-wrappers": "^0.0.1",
     "@sloops/library-utils": "^0.0.1",
-    "axios": "^0.17.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",

@@ -16,7 +16,7 @@
     "@sloops/library-utils": "^0.0.1",
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-apollo": "^1.4.16",
